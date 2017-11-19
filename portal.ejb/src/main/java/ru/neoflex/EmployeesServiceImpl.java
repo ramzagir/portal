@@ -31,7 +31,7 @@ public class EmployeesServiceImpl implements EmployeesService {
     public List<Employees> allEmployees() {
         // TypedQuery<Employees> query = entityManager.createNamedQuery(Employees.SEARCH_ALL, Employees.class);
         Query query =
-                entityManager.createQuery("SELECT c FROM Conference c", Conference.class);
+                entityManager.createQuery("SELECT e FROM Employees e", Employees.class);
         return query.getResultList();
     }
 

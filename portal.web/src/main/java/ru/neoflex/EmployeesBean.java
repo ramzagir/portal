@@ -16,6 +16,8 @@ import java.util.List;
 @SessionScoped
 public class EmployeesBean implements Serializable {
 
+    private String name;
+    private String lastname;
     private Employees employees;
 
     @EJB
@@ -29,8 +31,24 @@ public class EmployeesBean implements Serializable {
         this.employees = employees;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
     public void saveEmployees(){
-        employeesService.createEmployees(employees.getName(),employees.getLastname());
+        employeesService.createEmployees(name, lastname);
     }
 
     public List<Employees> showAllEmployees (){
