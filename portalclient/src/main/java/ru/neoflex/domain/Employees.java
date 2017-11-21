@@ -4,19 +4,19 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "Employees")
+@Table()
 //@NamedQueries({@NamedQuery(name = Employees.SEARCH_ALL, query = "SELECT e FROM Employees e") })
 public class Employees implements Serializable {
 
     @Id
-    @Column(name = "id")
+    @Column()
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Column(name = "name")
+    @Column()
     private String name;
 
-    @Column(name = "lastname")
+    @Column()
     private String lastname;
 
 //    public static final String SEARCH_ALL = "Employees.SearchAllOuery";

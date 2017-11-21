@@ -24,6 +24,10 @@
         <table>
             <h:dataTable value="#{employeesBean.showAllEmployees()}" var="employees">
                 <h:column>
+                    <h:outputText value="#{employees.id}"/>
+                </h:column>
+
+                <h:column>
                     <h:outputText value="#{employees.name}"/>
                 </h:column>
 

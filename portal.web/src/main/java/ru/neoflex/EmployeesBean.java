@@ -16,6 +16,7 @@ import java.util.List;
 @SessionScoped
 public class EmployeesBean implements Serializable {
 
+    private long id;
     private String name;
     private String lastname;
     private Employees employees;
@@ -48,7 +49,7 @@ public class EmployeesBean implements Serializable {
     }
 
     public void saveEmployees(){
-        employeesService.createEmployees(name, lastname);
+        employeesService.createEmployees(id, name, lastname);
     }
 
     public List<Employees> showAllEmployees (){

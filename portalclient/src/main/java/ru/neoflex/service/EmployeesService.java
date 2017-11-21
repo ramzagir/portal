@@ -15,7 +15,7 @@ public interface EmployeesService {
      * @param lastname фамилия создаваемого сотрудника
      * @return объект тпа Employees
      */
-    Employees createEmployees(String name, String lastname);
+    Employees createEmployees(long id, String name, String lastname);
 
     /**
      *@return  список всех объектов Employees
