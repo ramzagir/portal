@@ -18,14 +18,11 @@ public class EmployeesServiceImpl implements EmployeesService {
     @Override
     public Employees createEmployees(long id, String name, String lastname) {
 
-        Employees emp2 = entityManager.find(Employees.class, id);
-        if(emp2 == null) {
             Employees empl = new Employees();
             empl.setName(name);
             empl.setLastname(lastname);
             entityManager.persist(empl);
             return empl;
-        }else return emp2;
 
     }
 
