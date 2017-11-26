@@ -3,11 +3,15 @@
     <persistence-unit name="employeesdb">
         <jta-data-source>java:/MySqlDS</jta-data-source>
         <class>ru.neoflex.domain.Employees</class>
-
+        <class>ru.neoflex.domain.PersonDao.Person</class>
+        <class>ru.neoflex.domain.PersonDao.Chief</class>
+        <class>ru.neoflex.domain.PersonDao.Task</class>
+        <class>ru.neoflex.domain.PersonDao.Position</class>
+        <class>ru.neoflex.domain.PersonDao.Department</class>
         <properties>
-            <property name="hibernate.hbm2ddl.auto" value="update" />
-            <property name="hibernate.show_sql" value="false" />
-            <property name="hibernate.format_sql" value="false" />
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
         </properties>
     </persistence-unit>
 </persistence>
