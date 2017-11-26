@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - Employee@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="employee">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="edb"/>
+    <schema id="4" parent="1" name="empl"/>
+    <schema id="5" parent="1" name="empldb"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="mysql"/>
+    <schema id="8" parent="1" name="performance_schema"/>
+    <schema id="9" parent="1" name="sys"/>
+    <schema id="10" parent="1" name="testdb"/>
+    <schema id="11" parent="1" name="ushanka"/>
+    <table id="12" parent="2" name="chief"/>
+    <table id="13" parent="2" name="department"/>
+    <table id="14" parent="2" name="person"/>
+    <table id="15" parent="2" name="person_position"/>
+    <table id="16" parent="2" name="person_task"/>
+    <table id="17" parent="2" name="position"/>
+    <column id="18" parent="12" name="chief_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="19" parent="12" name="chief_title">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="20" parent="12" name="chief_description">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <index id="21" parent="12" name="chief_chief_id_uindex">
+      <ColNames>chief_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="22" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>chief_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="23" parent="12" name="chief_chief_id_uindex">
+      <ColNames>chief_id</ColNames>
+      <UnderlyingIndexName>chief_chief_id_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="24" parent="12" name="chief_person_person_id_fk">
+      <ColNames>chief_id</ColNames>
+      <RefSchemaName>employee</RefSchemaName>
+      <RefTableName>person</RefTableName>
+      <RefColNames>person_id</RefColNames>
+    </foreign-key>
+    <column id="25" parent="13" name="department_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="26" parent="13" name="title">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="27" parent="13" name="description">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <key id="28" parent="13" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>department_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="29" parent="14" name="person_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="30" parent="14" name="person_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="14" name="person_middle_name">
+      <Position>3</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="14" name="person_surname">
+      <Position>4</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="33" parent="14" name="person_person_id_uindex">
+      <ColNames>person_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="34" parent="14" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>person_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="35" parent="14" name="person_person_id_uindex">
+      <ColNames>person_id</ColNames>
+      <UnderlyingIndexName>person_person_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="36" parent="15" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="37" parent="15" name="person_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="15" name="position_id">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="39" parent="15" name="person_position_id_uindex">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="40" parent="15" name="person_position_person_person_id_fk">
+      <ColNames>person_id</ColNames>
+    </index>
+    <index id="41" parent="15" name="person_position_position_position_id_fk">
+      <ColNames>position_id</ColNames>
+    </index>
+    <key id="42" parent="15" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="43" parent="15" name="person_position_id_uindex">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>person_position_id_uindex</UnderlyingIndexName>
+    </key>
+    <foreign-key id="44" parent="15" name="person_position_person_person_id_fk">
+      <ColNames>person_id</ColNames>
+      <RefSchemaName>employee</RefSchemaName>
+      <RefTableName>person</RefTableName>
+      <RefColNames>person_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="45" parent="15" name="person_position_position_position_id_fk">
+      <ColNames>position_id</ColNames>
+      <RefSchemaName>employee</RefSchemaName>
+      <RefTableName>position</RefTableName>
+      <RefColNames>position_id</RefColNames>
+    </foreign-key>
+    <column id="46" parent="16" name="id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="47" parent="16" name="person_id">
+      <Position>2</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <column id="48" parent="16" name="task_id">
+      <Position>3</Position>
+      <DataType>bigint(20)|0</DataType>
+    </column>
+    <index id="49" parent="16" name="person_task_id_uindex">
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="50" parent="16" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="51" parent="16" name="person_task_id_uindex">
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>person_task_id_uindex</UnderlyingIndexName>
+    </key>
+    <column id="52" parent="17" name="position_id">
+      <Position>1</Position>
+      <DataType>bigint(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="53" parent="17" name="position_title">
+      <Position>2</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="17" name="position_description">
+      <Position>3</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="55" parent="17" name="position_position_id_uindex">
+      <ColNames>position_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="56" parent="17" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>position_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="57" parent="17" name="position_position_id_uindex">
+      <ColNames>position_id</ColNames>
+      <UnderlyingIndexName>position_position_id_uindex</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

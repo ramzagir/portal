@@ -1,0 +1,14 @@
+ru\neoflex\domain\PersonDao\Position.class
+ru\neoflex\domain\PersonDao\Contact\AbstractContact.class
+ru\neoflex\domain\Employees.class
+ru\neoflex\domain\PersonDao\Chief.class
+ru\neoflex\domain\PersonDao\Contact\Phone.class
+ru\neoflex\domain\PersonDao\Task.class
+ru\neoflex\domain\PersonDao\Contact\Messendger.class
+ru\neoflex\domain\PersonDao\Contact\Email.class
+ru\neoflex\domain\PersonDao\Person.class
+ru\neoflex\domain\PersonDao\Contact\Adress.class
+ru\neoflex\service\EmployeesService.class
+ru\neoflex\service\PersonService.class
+ru\neoflex\domain\PersonDao\Department.class
+ru\neoflex\service\ChiefService.class
