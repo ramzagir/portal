@@ -14,15 +14,15 @@
         <h:panelGrid columns="1">
             <h3>Выберите категорию</h3>
 
-            <h:selectOneMenu value="#{abstractDocBean.type}" required="true" id="typeID">
-                <f:selectItems value="#{abstractDocBean.categoryItems}"/>
+            <h:selectOneMenu value="#{documentsBean.type}" required="true" id="typeID">
+                <f:selectItems value="#{documentsBean.typeItems}"/>
             </h:selectOneMenu>
 
             Введите значение
-            <h:inputText value="#{abstractDocBean.value}"/>
+            <h:inputText value="#{documentsBean.value}"/>
 
-            <h:commandButton value="add" action="#{abstractDocBean.addDocuments()}"/>
-            <h:outputText id="show" value="#{abstractDocBean.confirmAdd()}" />
+            <h:commandButton value="add" action="#{documentsBean.addDocuments()}"/>
+            <h:outputText id="show" value="#{documentsBean.confirmAdd()}" />
         </h:panelGrid>
     </h:form>
 </h:body>

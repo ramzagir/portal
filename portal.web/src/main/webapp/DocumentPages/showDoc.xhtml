@@ -13,13 +13,13 @@
     <h:form>
         <h3>Выберите категорию</h3>
 
-        <h:selectOneMenu value="#{abstractDocBean.type}" required="true" id="typeID">
-            <f:selectItems value="#{abstractDocBean.categoryItems}"/>
+        <h:selectOneMenu value="#{documentsBean.type}" required="true" id="typeID">
+            <f:selectItems value="#{documentsBean.typeItems}"/>
         </h:selectOneMenu>
         <p><h:commandButton value="Select">
             <f:ajax execute="typeID" render="out"/>
         </h:commandButton></p>
-        <h:dataTable id="out" value="#{abstractDocBean.showDocuments()}" var="d">
+        <h:dataTable id="out" value="#{documentsBean.showDocuments()}" var="d">
             <h:column>
                 <h:outputText value="#{d.value}"/>
             </h:column>
